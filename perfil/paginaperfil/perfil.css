@@ -1,0 +1,206 @@
+
+body {
+  background-image: url("fundo.jpg");
+  background-size: cover;
+  background-position: center;
+ background-attachment: fixed;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+
+.topo-imagem {
+  padding: 60px 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 40px auto;
+}
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+  
+
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+.dados-perfil h1 {
+  margin: 0;
+  font-size: 2.5rem;
+   color: #ffffff; /* branco puro */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* sombra para destacar no fundo */
+}
+
+.descricao {
+  margin-top: 8px;
+  font-size: 1.2rem;
+   color: #f0f0f0; /* cinza bem claro */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/*MENU NAVEGAÇÃO*/
+.menu-navegacao ul {
+  list-style: none;/*Remove as bolinhas (•)*/
+  display: flex;/*Transforma a <ul> em um container flexível*/
+  justify-content: flex-start; /*itens fiquem alinhados à esquerda*/
+ gap: 2rem;/*Adiciona um espaço de 2rem (algo como 32px) entre cada item*/
+  padding: 0;
+  margin: 20px 0;
+
+}
+
+.menu-navegacao li a { 
+    color: #e91e63;        
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 6px;
+    transition: background-color 0.3s ease, color 0.3S ease;
+    padding: 0.5rem 1rem;
+}
+.menu-navegacao li a:hover,
+.menu-navegacao li a:focus {
+    background-color:#E91E63;
+    color: white;
+    border-radius: 6px;
+    transform: scale(1.05);
+}
+/* Scroll suave ao clicar nos links*/ 
+html {
+  scroll-behavior: smooth;
+}
+/* Responsivo no celular: se empilham */
+@media (max-width: 768px) {
+  .menu-navegacao  {
+    flex: 1 1 100%;
+  }
+  .menu-navegacao ul {
+    flex-direction: column; /* empilha os itens verticalmente */
+    align-items: flex-start; /* alinha à esquerda */
+    gap: 1rem;
+  }
+
+  .menu-navegacao li a {
+    display: block;
+    width: 100%; /* ocupa toda a largura disponível */
+  }
+}
+section {
+  scroll-margin-top: 80px; /* valor ajustado conforme a altura do seu menu */
+}
+/*alternar a visibilidade*/
+section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+section.visivel {
+  display: block;
+  opacity: 1;
+}
+/*trajetoria*/
+.trajetoria {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+   background-color:rgba(0, 0, 0, 0.4);
+   border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra leve para destacar o bloco */
+}
+
+.trajetoria h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* destaca o título sobre a imagem */
+
+}
+.trajetoria-card p {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* melhora a leitura sobre fundos escuros ou vibrantes */
+border-left: 4px solid #e91e63;
+  padding-left: 12px;
+
+}
+.contato {
+    max-width: 300px;
+  margin: 60px auto;
+  padding: 30px;
+   background-color:rgba(0, 0, 0, 0.4);
+   border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra leve para destacar o bloco */
+}
+.contato h2 {
+  text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* destaca o título sobre a imagem */
+
+}
+
+    .contato-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.contato-item {
+    flex: 1 1 250px;
+    font-size: 1.1rem;
+}
+    .contato-item a {
+        display: block;
+        margin-top: 0.05rem;
+        color: #0077cc;
+        text-decoration: none;
+        font-weight: bold;
+        word-break: break-all;
+    }
+    .contato-item a:hover {
+        text-decoration: overline;
+    }
+  .icone-contato {
+    width: 60px;
+    height: 60px;
+     transition: transform 0.3s ease;
+     
+
+  }
+  .icone-contato:hover {
+  transform: scale(1.1);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+

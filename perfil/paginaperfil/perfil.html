@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">          
+       <title>Perfil Profissional</title>
+    <link rel="stylesheet" href="./perfil.css">
+</head>
+<body>
+    <header class="topo-imagem">
+        <div class="perfil-header"> 
+    <img src="./imgstatus.jpg" alt="Minha foto" class="foto-perfil">
+    <div class="dados-perfil">
+    <h1>Patricia Paes</h1>
+    <p class="descricao">Perfil Profissional</p>
+    </div>
+        </div>
+    </header>
+    <nav class="menu-navegacao">
+     <ul>
+    <li><a href="javascript:void(0);" onclick="mostrarSecao('trajetoria')">Trajetória</a></li>
+    <li><a href="javascript:void(0);" onclick="mostrarSecao('habilidades')">Habilidades</a></li>
+    <li><a href="javascript:void(0);" onclick="mostrarSecao('projetos')">Projetos</a></li>
+    <li><a href="javascript:void(0);" onclick="mostrarSecao('contato')">Contato</a></li>
+  </ul>
+ </nav>
+    <main class="conteudo-central">
+      
+            
+     
+     <section id="trajetoria"class="trajetoria">
+        
+            <h2>Trajetória</h2>
+            <div class="trajetoria-card">
+             <p>  Com 12 anos de atuação como merendeira em uma escola pública, sempre estive inserida no ambiente educacional e desenvolvi uma visão sensível sobre o impacto da tecnologia na transformação da sociedade. Hoje, estou no último semestre da minha graduação em Análise e Desenvolvimento de Sistemas e sigo em transição de carreira com dedicação e propósito.
+    </p>
+
+    Para complementar minha formação acadêmica, participo ativamente de bootcamps como o <strong>+PraTi</strong>, com foco em <em>desenvolvimento full stack</em>, e da iniciativa <strong>Vai na Web</strong>, onde aprofundo meus conhecimentos em <em>cibersegurança</em>. Também realizo estágio comunitário em uma escola, onde apoio a equipe nas demandas tecnológicas e conheço, na prática, os desafios e soluções do dia a dia escolar.
+  </p>
+  <p>
+    Apesar de ainda não ter experiência formal na área, busco diariamente evoluir, colocando meus conhecimentos em prática com empenho e curiosidade. Minha jornada é movida por propósito, aprendizado constante e vontade de fazer a diferença por meio da tecnologia.
+  </p>
+</div> </section>
+  <section id="habilidades" class="trajetoria">
+  <h2>Habilidades</h2>
+  <div class="trajetoria-card">
+    <p><strong>Gestão:</strong> Coordenação de rotinas escolares por meio de escalas e tabelas; resolução de conflitos e apoio à equipe com empatia e firmeza.</p>
+    <p><strong>Comunicação:</strong> Facilidade para se expressar, ouvir e mediar situações com diferentes públicos — habilidades fortalecidas no ambiente escolar e bancário.</p>
+    <p><strong>Solução:</strong> Capacidade de encontrar soluções práticas e rápidas, lidando com imprevistos e colaborando com os demais setores.</p>
+    <p><strong>Experiência:</strong> Atuação como aprendiz no Banco do Brasil, desenvolvendo habilidades administrativas, organização e atendimento ao público.</p>
+    <p><strong>Tecnologia:</strong> Formação em ADS, participação em bootcamps e estágio comunitário na área de tecnologia, com foco em desenvolvimento e cibersegurança.</p>
+  </div>
+</section>
+        <section id="projetos" class="trajetoria">
+            <h2>Projetos</h2>
+            <div class="card-grid">
+        <div class="card">
+          <h3>Em breve!</h3>
+          <p>Projetos em desenvolvimento. Acompanhe</p>
+        </div>
+            </div>
+        </section>
+     
+        </section>
+        <section id="contato" class="contato">
+          <h2>Contato</h2>
+           <div class="contato-grid">
+         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=patriciapaes88@gmail.com" target="_blank" title="Enviar e-mail via Gmail">
+
+            <img src="gmail.jpg" alt="Email" class="icone-contato">
+            </a>
+    
+            <a href="https://linkedin.com/in/patricia-paes-728646348" target="_blank" title="LinkedIn">
+           <img src="linkedin.jpg" alt="LinkedIn" class="icone-contato">    
+            </a>
+            <a href="https://github.com/Patriciapaes88" target="_blank" rel="noopener noreferrer">
+                <img src="github.jpg" alt="GitHub" class="icone-contato">
+            </a>
+      <a href="https://wa.me/5567991250954" target="_blank" title="Fale comigo no WhatsApp">
+    <img src="wats.png" alt="WhatsApp" class="icone-contato">
+  </a>
+
+</div>
+            
+        </section>
+       
+        <script>
+ 
+  function mostrarSecao(id) {
+    const secao = document.getElementById(id);
+    
+    // Verifica se a seção já está visível
+    if (secao.classList.contains("visivel")) {
+      // Se sim, esconde
+      secao.classList.remove("visivel");
+    } else {
+      // Se não, esconde todas as outras e mostra só essa
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.remove("visivel");
+      });
+      secao.classList.add("visivel");
+    }
+  }
+  // Fecha a seção visível se clicar fora dos links
+document.addEventListener('click', function(event) {
+  const ehBotao = event.target.closest('.menu-navegacao');
+  const ehSecao = event.target.closest('section');
+
+  // Se não clicou num botão ou dentro de uma seção visível
+  if (!ehBotao && !ehSecao) {
+    document.querySelectorAll("section").forEach(sec => {
+      sec.classList.remove("visivel");
+    });
+
+    // Opcional: esconder o footer também
+    const footer = document.querySelector(".footer");
+    if (footer) {
+      footer.style.display = "none";
+    }
+  }
+});
+
+  //footer
+  function mostrarSecao(id) {
+  const secao = document.getElementById(id);
+  const footer = document.querySelector(".footer");
+
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.remove("visivel");
+  });
+
+  secao.classList.add("visivel");
+
+  // Só mostra o footer na seção "contato"
+  footer.style.display = (id === "contato") ? "block" : "none";
+}
+
+</script>
+    </main>
+
+    
+<footer class="footer">&copy; 2025 Patricia Paes. Todos os direitos reservados.</footer>
+</body>
+</html>
