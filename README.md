@@ -40,5 +40,15 @@ Site adaptável para diferentes tamanhos de tela, incluindo celular e tablet.
 A seção de **projetos ainda está em construção** e será atualizada em breve com trabalhos desenvolvidos ao longo do curso.
 
 ---
+## 🚀 Como executar localmente
+
+Clone este repositório com o seguinte comando:
+
+git clone https://github.com/Patriciapaes88/Pagina-De-Perfil.git
+
+Depois é só abrir o arquivo `perfil.html` no navegador! 😊
+
+---
 
 Desenvolvido com 💜 por [Patricia Paes](https://linkedin.com/in/patricia-paes-728646348)
+
